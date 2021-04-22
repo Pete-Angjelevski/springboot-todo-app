@@ -7,7 +7,7 @@ export default function TodoItem ({ todoItem }) {
   useEffect(() => {
     if (change) {
       console.log('updated')
-      fetch(`http://localhost.8080/api/v1/todoItems/${todo.id}`, {
+      fetch(`http://localhost:8080/api/v1/todoItems/${todo.id}`, {
         method: 'PUT',
         headers: {
           'content-type': 'application/json'
