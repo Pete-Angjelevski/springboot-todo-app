@@ -1,14 +1,15 @@
 import React from 'react'
 
+import TodoItem from './TodoItem'
+
 export default function TodoItems ({ todoItems }) {
   return (
     <div>{todoItems ? todoItems.map(todoItem => {
-      return (
-        <div key={todoItem.id}>
-          <p>{todoItem.task}</p>
-          <input type="checkbox" checked={todoItem.isDone} ></input>
-        </div>
-      )
+      return <TodoItem
+        key={todoItem.id}
+        todoItem={todoItem}
+
+      />
     }) : 'loading data ...'}
     </div>
 
