@@ -20,10 +20,10 @@ public class TodoService {
 	}
 	
 	public TodoItem updateTodoItem(Integer id, TodoItem todoItem) {
-		Optional <TodoItem> todoOpt = todoRepo.fetchAllTodoItems()
-			.stream()
-			.filter(item -> item.getId().equals(id))
-			.findAny();
+		Optional <TodoItem> todoOpt =   todoRepo.fetchAllTodoItems()
+												.stream()
+												.filter(item -> item.getId().equals(id))
+												.findAny();
 		
 		if (todoOpt.isPresent()) {
 			TodoItem item = todoOpt.get();
