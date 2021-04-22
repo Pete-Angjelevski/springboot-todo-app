@@ -17,4 +17,11 @@ public class TodoService {
 	public List<TodoItem> fetchAllTodoItems () {
 		return todoRepo.fetchAllTodoItems();
 	}
+	
+	public void updateTodoItem(Integer id, TodoItem todoItem) {
+		Optional <TodoItem> todoOpt = todoRepo.fetchAllTodoItems()
+			.stream()
+			.filter(item -> item.getId().equals(id));
+	}
+	
 }
