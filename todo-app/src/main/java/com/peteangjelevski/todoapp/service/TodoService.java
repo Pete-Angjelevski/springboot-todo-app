@@ -1,4 +1,4 @@
-package com.peteangjelevski.todoapp;
+package com.peteangjelevski.todoapp.service;
 
 import java.util.List;
 
