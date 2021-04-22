@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import TodoItems from './TodoItems'
+
 const App = () => {
   const [todoItems, setTodoItems] = useState(null)
 
@@ -15,16 +17,9 @@ const App = () => {
   }, [])
 
   return (
-    <div>{todoItems ? todoItems.map(todoItem => {
-      return (
-        <div key={todoItem.id}>
-          <p>{todoItem.task}</p>
-          <input type="checkbox" checked={todoItem.isDone} onChange={}></input>
-        </div>
-      )
-    }) : 'loading data ...'}
-    </div>
-
+    <>
+      <TodoItems todoItems={todoItems}/>
+    </>
   )
 }
 
