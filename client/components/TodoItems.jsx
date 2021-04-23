@@ -4,14 +4,15 @@ import TodoItem from './TodoItem'
 
 export default function TodoItems ({ todoItems }) {
   return (
-    <div>{todoItems ? todoItems.map(todoItem => {
-      return <TodoItem
-        key={todoItem.id}
-        todoItem={todoItem}
-
-      />
+    <ul>{todoItems ? todoItems.map(todoItem => {
+      return (
+        <li key={todoItem.id}>
+          <TodoItem
+            todoItem={todoItem}
+          />
+        </li>)
     }) : 'loading data ...'}
-    </div>
+    </ul>
 
   )
 }

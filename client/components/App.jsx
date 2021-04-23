@@ -18,7 +18,12 @@ const App = () => {
 
   return (
     <>
-      <TodoItems todoItems={todoItems}/>
+      <header className="header">
+        <h1>To Dos</h1>
+      </header>
+      <section className="main"></section>
+      <TodoItems todoItems={todoItems} />
+      <footer className="footer"></footer>
     </>
   )
 }

@@ -11,7 +11,7 @@ import com.peteangjelevski.todoapp.domain.TodoItem;
 public class TodoRepository {
 	
 	private List<TodoItem> todoItems = new ArrayList<>();
-	private Integer idCounter = 0;
+	private Integer idCounter = 1;
 	public List<TodoItem> fetchAllTodoItems () {
 		
 		
@@ -19,7 +19,7 @@ public class TodoRepository {
 			TodoItem item1 = new TodoItem();
 			item1.setId(idCounter++);
 			item1.setIsDone(false);
-			item1.setTask("Task #1");
+			item1.setTask("Laundry");
 			
 			todoItems.add(item1);
 		}

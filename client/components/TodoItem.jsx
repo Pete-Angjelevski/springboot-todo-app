@@ -26,8 +26,10 @@ export default function TodoItem ({ todoItem }) {
 
   return (
     <div>
-      <p>{todoItem.task}</p>
+      <p>Task: {todoItem.task}</p>
+      <label htmlFor="completed">Completed: </label>
       <input
+        name="completed"
         type="checkbox"
         checked={todo.isDone}
         onChange={() => {
